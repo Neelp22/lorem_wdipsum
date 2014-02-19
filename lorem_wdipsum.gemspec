@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'neelp22@gmail.com'
   s.files       = ["lib/lorem_wdipsum.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/hola'
+    'https://github.com/Neelp22/lorem_wdipsum'
   s.license       = 'MIT'
 end
