@@ -7,18 +7,33 @@ class Lorem
 	end
 
 	def self.word(length)
+		new_array = []
 		if length <= @words.length
 			length.times do
-				puts put_word
+				new_array.push("#{put_word}um")
 			end
+			return new_array.join(" ")
+		else
+			value = length / @words.length.round
+			(2..value).each do |x|
+				@words = @words + @words.shuffle!
+			end
+			length.times do
+				new_array.push("#{put_word}um")
+			end
+			return new_array.join(" ")
 		end
 	end
 
 	def self.paragraph(length)
+		new_array = []
 		length.times do
-			sentence = word(8)
-			puts sentence
+			5.times do
+				sentence = word(8)
+				new_array.push("#{sentence}" + ".")
+			end
 		end
+		return new_array.join(" ")
 	end
 
 end
