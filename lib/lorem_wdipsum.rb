@@ -7,11 +7,16 @@ class Lorem
 	end
 
 	def self.word(length)
+		int = length.to_i
+		ipsum = []
+
 		if length <= @words.length
 			length.times do
-				puts put_word
+				ipsum << put_word
 			end
 		end
+
+		puts ipsum.join(" ")
 	end
 
 	def self.paragraph(length)
